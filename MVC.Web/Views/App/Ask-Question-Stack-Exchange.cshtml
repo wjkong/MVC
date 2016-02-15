@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Ask Question";
+}
+
+<style type="text/css">
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: #dff0d8;
+    }
+
+    .sortable, .pagination a, [data-toggle="popover"] {
+        cursor: pointer;
+    }
+</style>
+<div class="page-header">
+</div>
+<div class="row">
+    <div class="col-sm-3 col-lg-2">
+        <div class="input-group">
+            <span class="input-group-addon"><label class="control-label" for="ddlPageSize">Page Size</label></span>
+            <select id="ddlPageSize" class="form-control">
+                <option value=5>5</option>
+                <option value=10 selected=selected>10</option>
+                <option value=20>20</option>
+                <option value=30>30</option>
+                <option value=50>50</option>
+                <option value=100>100</option>
+            </select>
+        </div>
+    </div>
+    <br class="visible-xs-block" />
+    <div class="col-sm-9 col-lg-10">
+        <div class="input-group">
+            <input type=text id="txtQuestion" class="form-control" placeholder="Ask question from Stack Overflow ..." />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-success" id=btnSearch><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row text-info">
+    <div class="col-sm-7">
+        Question/Answer Search Powered by Stack Exchange API
+    </div>
+    <div id=resultInfo class="col-sm-5 text-right">
+
+    </div>
+</div>
+<div id="detail">
+</div>
+<div class=row>
+    <div class="col-xs-2 col-sm-1">
+        <button type="button" class="btn btn-success btn-lg" id=btnPrev style="display:none"><span class='glyphicon glyphicon-triangle-left'></span></button>
+    </div>
+    <div class="col-xs-8 col-sm-9 text-center">
+        <ul class="pagination"></ul>
+    </div>
+    <div class="col-xs-2 col-sm-2 text-right">
+        <button type="button" class="btn btn-success btn-lg" id=btnNext style="display:none"><span class='glyphicon glyphicon-triangle-right'></span></button>
+    </div>
+</div>
+
+<input type=hidden id=hidCurrentPage value=1 />
+<input type=hidden id=hidCurrentSort value=votes />
+<input type=hidden id=hidCurrentOrder value=desc />
+
+<input type=hidden id=hidLastPageIndex />
+<input type=hidden id=hidActiveMenu value="hypApp" />
+<input type=hidden id=hidRoot value="../" />
+
+@section Scripts {
+    @Scripts.Render("~/bundles/AskQuestion")
+}

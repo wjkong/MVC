@@ -214,7 +214,16 @@
     <Content Include="Images\languageTranslator.PNG" />
     <Content Include="Images\WeatherForecast.PNG" />
     <Content Include="Scripts\App\Common.js" />
+    <Content Include="Scripts\App\CountryState.js" />
+    <Content Include="Scripts\App\CurrencyConverter.js" />
     <Content Include="Scripts\App\JobSearch.js" />
+    <Content Include="Scripts\App\LanguageTranslator.js" />
+    <Content Include="Scripts\App\LocalBusinessSearch.js" />
+    <Content Include="Scripts\App\Login.js" />
+    <Content Include="Scripts\App\MortgageCalculator.js" />
+    <Content Include="Scripts\App\MyPhoto.js" />
+    <Content Include="Scripts\App\PhotoGallery.js" />
+    <Content Include="Scripts\App\PlaceFinder.js" />
     <Content Include="Scripts\App\StackExchange.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -224,7 +233,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\Mvc.pubxml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\App\weatherforecast.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
@@ -239,7 +250,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

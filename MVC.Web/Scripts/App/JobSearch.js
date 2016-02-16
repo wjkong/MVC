@@ -141,10 +141,10 @@ function Refresh(target) {
     var fromAge = $('#ddlFromAge').val();
 
 
-    var url = "http://localhost:13698/route/search";
+    var url = "http://localhost:39725/route/service/getjob";
     var param = "{ 'query': '{0}', 'country': '{1}', 'state': '{2}', 'city': '{3}', 'startIndex': '{4}', 'pageSize': '{5}', 'sort': '{6}', 'radius': '{7}', 'siteType': '{8}', 'jobType': '{9}', 'fromAge': '{10}', 'userIp': '{11}', 'userAgent': '{12}'}";
     param = param.format(query, country, state, city, startIndex, pageSize, sort, radius, siteType, jobType, fromAge, userIp, userAgent);
-    param = "{ 'query': 'Kong' }";
+
     var str = [];
     var i = 0;
     $.ajax({
@@ -159,7 +159,6 @@ function Refresh(target) {
         },
         success: OnSuccess,
         error: function (xhr, status, error) {
-            debugger;
             alert(status);
         },
         complete: function (xhr, status) {
@@ -181,7 +180,7 @@ function OnSuccess(data, status) {
 
     $('#btnPrev, #btnNext').show();
 
-    var jsonData = JSON.parse(data.d)
+    var jsonData = JSON.parse(data)
     var str = [];
 
     var tableHeaders = ["Job Title", "Company", "Job Description", "Location", "Published"];

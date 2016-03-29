@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Diagnostics;
+using System.Web.Mvc;
 
 namespace MVC.Web.Controllers
 {
@@ -13,6 +14,8 @@ namespace MVC.Web.Controllers
         [ActionName("Indeed-Job-Search")]
         public ActionResult JobSearch()
         {
+            Debug.WriteLine("Hello world");
+
             return View();
         }
     }

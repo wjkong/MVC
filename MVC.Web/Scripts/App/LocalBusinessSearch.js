@@ -165,7 +165,7 @@ function Refresh(target) {
     if ($.trim(location).length == 0)
         return false;
 
-    var url = "Local-Business-Search.aspx/RetrieveLocalInfo"
+    var url = "local-business-search-yelp/RetrieveLocalInfo"
     var param = "{ 'term': '{0}', 'location': '{1}', 'startIndex': '{2}', 'pageSize': '{3}', 'radius': '{4}' }";
     param = param.format(term, location, startIndex, pageSize, radius);
     var str = [];

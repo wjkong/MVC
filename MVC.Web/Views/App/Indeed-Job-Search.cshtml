@@ -1,6 +1,6 @@
 ﻿@{
  
-    ViewBag.Title = "Ask Question";
+    ViewBag.Title = "Job Search";
    
 }
 <div class="page-header">
@@ -10,7 +10,7 @@
         <div class="input-group">
             <span class="input-group-addon"><label class="control-label" for="txtCity">City</label></span>
 
-            <input type=text id="txtCity" class="form-control" placeholder="Enter your preferred city" onfocus=geolocate() />
+            <input type=text id="txtCity" class="form-control" placeholder="Enter your preferred city" onfocus="geolocate()" />
 
         </div>
     </div>
@@ -153,7 +153,7 @@
         </div>
     </div>
 </div>
-</div>
+
 
 
 <input type=hidden id=hidCurrentPage value=1 />
